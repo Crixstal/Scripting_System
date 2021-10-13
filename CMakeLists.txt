@@ -81,6 +81,7 @@ target_link_libraries (
 	Core
 	PRIVATE pybind11::embed
 	PRIVATE "${LIB}/glfw3.lib"
+	PRIVATE "${LIB}/glfw3dll.lib"
 	PRIVATE "${LIB}/python3.lib"
 	PRIVATE "${LIB}/python37.lib"
 	PRIVATE "${LIB}/_tkinter.lib"
