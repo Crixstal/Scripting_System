@@ -1,3 +1,4 @@
+#include <pybind11/embed.h>
 
 #include <iostream>
 #include <string>
@@ -379,9 +380,50 @@ void Scene::Scene::processInput(GLFWwindow* window, Maths::Vector2& mousePos, in
 		camera.near -= 0.0001f;
 }
 
+
+PYBIND11_EMBEDDED_MODULE(embed, module)
+{
+	module.doc() = "Embedded Module";
+
+	pybind11::class_<Player>(module, "Player")
+		.def_readwrite("maxHorizontalSpeed", &Player::maxHorizontalSpeed)
+		.def_readwrite("maxVerticalSpeed", &Player::maxVerticalSpeed)
+		.def_readwrite("jumpForce", &Player::jumpForce)
+		.def_readwrite("maxShootTimer", &Player::maxShootTimer)
+		.def_readwrite("maxReloadTimer", &Player::maxReloadTimer)
+		.def_readwrite("left", &Player::left)
+		.def_readwrite("backward", &Player::backward)
+		.def_readwrite("forward", &Player::forward)
+		.def_readwrite("right", &Player::right)
+		.def_readwrite("reload", &Player::reload);
+}
+
 // Updates the scene (calls the update)
 void Scene::Scene::update(float deltaTime, GLFWwindow* window, Maths::Vector2& mousePos, int& currScene)
 {
+	pybind11::scoped_interpreter guard{};
+
+	auto player_module = pybind11::module::import("Player");
+	auto player_function = player_module.attr("playerConfig");
+
+	if (!loadOnce)
+	{
+		player_function(&player);
+		loadOnce = true;
+	} 
+
+	if (glfwGetKey(window, GLFW_KEY_H) && !isPressed) //hot reload
+	{
+		player_module.reload();
+		player_function(&player);
+		std::cout << "Player.py reloaded" << "\n";
+		isPressed = true;
+	}
+	else if (glfwGetKey(window, GLFW_KEY_H) && isPressed)
+	{}
+	else
+		isPressed = false;
+
 	checkGameState(window, currScene);
 
 	player.p_camera = &camera;

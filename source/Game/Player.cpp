@@ -155,14 +155,14 @@ void Player::checkEvents()
 	leftPressed = glfwGetKey(window, GLFW_KEY_Q);
 	forwardPressed = glfwGetKey(window, GLFW_KEY_Z);
 #else
-	leftPressed = glfwGetKey(window, GLFW_KEY_A);
-	forwardPressed = glfwGetKey(window, GLFW_KEY_W);
+	leftPressed = glfwGetKey(window, left);
+	forwardPressed = glfwGetKey(window, forward);
 #endif
-	rightPressed = glfwGetKey(window, GLFW_KEY_D);
-	backwardPressed = glfwGetKey(window, GLFW_KEY_S);
+	rightPressed = glfwGetKey(window, right);
+	backwardPressed = glfwGetKey(window, backward);
 	
 	downPressed = glfwGetKey(window, GLFW_KEY_LEFT_SHIFT);
-	RPressed = glfwGetKey(window, GLFW_KEY_R) && reloadTimer <= 0.f;
+	RPressed = glfwGetKey(window, reload) && reloadTimer <= 0.f;
 	canFire = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_1) && shootTimer <= 0.f && bulletNumber > 0;
 
 	if (glfwGetKey(window, GLFW_KEY_SPACE) && isGrounded)

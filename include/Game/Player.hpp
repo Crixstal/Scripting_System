@@ -24,21 +24,29 @@ public:
 	void update(float deltaTime , const std::vector<Platform>& platforms, std::vector<std::shared_ptr<Enemy>>& enemies, std::vector<std::shared_ptr<Particle>>& particles, Weapon& weapon) override;
 	
 	Vector3 respawn = {};
+
+	float maxHorizontalSpeed = 0.25f;
+	float maxVerticalSpeed = 5.f;
+	float jumpForce = 1.f;
+	float maxShootTimer = 0.5f;
+	float maxReloadTimer = 4.f;
+
+	int forward = 'W';
+	int left = 'A';
+	int backward = 'S';
+	int right = 'D';
+	int reload = 'R';
+
 private:
 	Vector3 playerDir = { 0.f ,0.f ,0.f };
 
 	float inertia = 10.f;
-	float maxHorizontalSpeed = 0.25f;
-	float maxVerticalSpeed = 5.f;
-	float jumpForce = 1.f;
 	float save = 0.f;
 	float rangeShoot = 100.f;
 	int bulletNumber = 5;
 
-	float maxShootTimer = 0.5f;
 	float shootTimer = 0.f;
 
-	float maxReloadTimer = 4.f;
 	float reloadTimer = 0.f;
 
 	bool forwardPressed = false;

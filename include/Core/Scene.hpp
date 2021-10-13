@@ -45,6 +45,9 @@ namespace Resources
 			void renderModel(int model, const Maths::mat4x4& modelMat, const Maths::mat4x4& viewProj);
 			void renderModel(LowRenderer::Model& model, const Maths::mat4x4& modelMat, const Maths::mat4x4& viewProj);
 		private:
+			bool isPressed = false;
+			bool loadOnce = false;
+
 			bool isMenu = false;
 			Interface m_interface;
 			Player player;
