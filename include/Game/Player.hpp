@@ -31,11 +31,11 @@ public:
 	float maxShootTimer = 0.5f;
 	float maxReloadTimer = 4.f;
 
-	int forward = 'W';
-	int left = 'A';
-	int backward = 'S';
-	int right = 'D';
-	int reload = 'R';
+	int kForward = 'W';
+	int kLeft = 'A';
+	int kBackward = 'S';
+	int kRight = 'D';
+	int kReload = 'R';
 
 private:
 	Vector3 playerDir = { 0.f ,0.f ,0.f };

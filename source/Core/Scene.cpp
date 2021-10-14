@@ -390,11 +390,11 @@ PYBIND11_EMBEDDED_MODULE(embed, module)
 		.def_readwrite("jumpForce", &Player::jumpForce)
 		.def_readwrite("maxShootTimer", &Player::maxShootTimer)
 		.def_readwrite("maxReloadTimer", &Player::maxReloadTimer)
-		.def_readwrite("left", &Player::left)
-		.def_readwrite("backward", &Player::backward)
-		.def_readwrite("forward", &Player::forward)
-		.def_readwrite("right", &Player::right)
-		.def_readwrite("reload", &Player::reload);
+		.def_readwrite("kLeft", &Player::kLeft)
+		.def_readwrite("kBackward", &Player::kBackward)
+		.def_readwrite("kForward", &Player::kForward)
+		.def_readwrite("kRight", &Player::kRight)
+		.def_readwrite("kReload", &Player::kReload);
 }
 
 // Updates the scene (calls the update)

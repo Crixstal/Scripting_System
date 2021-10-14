@@ -21,7 +21,7 @@ namespace LowRenderer
 			parent = inParent;
 		};
 		Model(Maths::Vector3 inPosition, Maths::Vector3 inRotation, Maths::Vector3 inScale, std::string inTexName = "../resources/blank.png", std::string inMeshName = "../resources/blank.obj",
-			std::string inShaderName = "resources/shader", Model* inParent = nullptr)
+			std::string inShaderName = "../resources/shader", Model* inParent = nullptr)
 		{
 			meshName = inMeshName;
 			shaderName = inShaderName;

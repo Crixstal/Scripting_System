@@ -37,7 +37,7 @@ GITLAB
 When you clone the project unzip Other.zip.  
 Then execute "generate_vs2019.bat" in the folder project to create the .sln solution.  
 Open the solution and generate the project Game:  
-![Generate](screen/generate.png)
+![Generate](screen/Generate.png)
 
 It will create a Debug folder:  
 ![Debug](screen/debug_folder.png)
