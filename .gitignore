@@ -1,13 +1,9 @@
-header/**
-externals/**
-
-resources/**
-!resources/*.frag
-!resources/*.vert
-!resources/*.txt
-
 x64/**
 .vs/**
+
+header/**
+externals/**
+resources/**
 
 project/**
 !project/*.bat
