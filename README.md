@@ -35,8 +35,6 @@ The program runs in Debug platform x64.
 If you want to modify some player variables open the python file Player.py in source/Game/scripts.
 You can use the hot reload by pressing the H key (you need to press Alt+Tab to exit the game window).
 
-GITLAB
----
 When you clone the project unzip Other.zip.  
 Then execute "generate_vs2019.bat" in the folder project to create the .sln solution.  
 Open the solution and generate the project Game:  
