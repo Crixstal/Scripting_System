@@ -7,7 +7,7 @@
 - [Third-party programs and libraries](##Third-party%20programs%20and%20libraries)
 - [References](##References)
 
-<br><br>
+<br>
 
 ## **Description**
 
@@ -16,9 +16,12 @@ The goal of the project is to :
 - learn about a dynamic language
 - learn about integration in a static environment
 
-<br><br>
+<br>
 
 ## **Configuration**
+
+The build can be found under the GOLD release.
+To launch the game just execute "launcher.bat" in the folder "project".
 
 The program runs in Debug platform x64. 
 
@@ -47,11 +50,7 @@ You need to put the DLLs inside, they can be found in the folder project/dll:
 
 You can now run the game by pressing F5 in Visual Studio or using "launcher.bat".
 
-SIRIUS
----
-To launch the game just execute "launcher.bat" in BIN/project
-
-<br><br>
+<br>
 
 ## **Third-party programs and libraries**
 
@@ -67,7 +66,7 @@ Glad
 ---
 https://glad.dav1d.de/
 
-<br><br>
+<br>
 
 ## **References**
 
