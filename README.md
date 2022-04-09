@@ -2,9 +2,9 @@
 
 ## **Summary**
 
-- [Description](##Description)
-- [Configuration](##Configuration)
-- [References](##References)
+- [Description](#Description)
+- [Configuration](#Configuration)
+- [References](#References)
 
 <br>
 
