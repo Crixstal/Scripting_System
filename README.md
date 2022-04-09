@@ -4,7 +4,6 @@
 
 - [Description](##Description)
 - [Configuration](##Configuration)
-- [Third-party programs and libraries](##Third-party%20programs%20and%20libraries)
 - [References](##References)
 
 <br>
@@ -50,30 +49,16 @@ You can now run the game by pressing F5 in Visual Studio or using "launcher.bat"
 
 <br>
 
-## **Third-party programs and libraries**
-
-pybind11
----
-https://github.com/pybind/pybind11.git
-
-GLFW
----
-https://www.glfw.org/
-
-Glad
----
-https://glad.dav1d.de/
-
-<br>
-
 ## **References**
 
-Python
----
-https://docs.python.org/3.7/
+Python: https://docs.python.org/3.7/
 
 pybind11
 ---
 - https://www.youtube.com/playlist?list=PLb9uFnQyeGTcKIHNUNUUuLbRhumAZd-fy
 - https://github.com/pybind/pybind11
 - https://www.youtube.com/watch?v=_5T70cAXDJ0
+
+<br>
+
+[Head of page](#Summary)
